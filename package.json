@@ -1,5 +1,5 @@
 {
-  "name": "PokemonDesk",
+  "name": "pokemon_desk",
   "version": "1.0.0",
   "description": "Tutorial",
   "scripts": {
@@ -11,11 +11,16 @@
   "author": "damir <damir@gismeteo.ru>",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "css-loader": "^5.0.0",
     "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
     "ts-loader": "^8.0.7",
     "typescript": "^4.0.3",
     "webpack": "4.44.2",
