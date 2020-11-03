@@ -16,10 +16,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.svg$/,
-        loader: ['url-loader'],
-      },
-      {
         test: /\.[tj]sx?$/,
         exclude: /node_modules/,
         use: ['ts-loader'],
