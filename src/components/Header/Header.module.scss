@@ -1,9 +1,11 @@
-.header {
+@import '../../variables';
+
+.root {
   box-sizing: border-box;
   width: 100%;
   padding: 0 20px;
 
-  background-color: #f5db13;
+  background-color: $third;
   box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
 }
 
@@ -50,24 +52,25 @@
 
   cursor: pointer;
 
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     display: block;
-    width: 100%;
+    width: 0;
     height: 3px;
 
     border-radius: 3px;
-  }
-}
-
-.menuLinkActive {
-  cursor: auto;
-
-  &::after {
     background-color: #212121;
+    transition: width linear 0.25s;
   }
 }
