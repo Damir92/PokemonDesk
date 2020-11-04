@@ -4,6 +4,4 @@ import App from './App';
 
 import './index.css';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
-
-export default App;
+ReactDOM.render(React.createElement(App), document.getElementById('root'));
