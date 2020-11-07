@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import cn from 'classnames';
 
 import s from './Header.module.scss';
@@ -20,7 +21,7 @@ const MENU: IMenu[] = [
   {
     id: 2,
     value: 'Pokédex',
-    link: '/',
+    link: '/pokedex',
   },
   {
     id: 3,
@@ -44,10 +45,10 @@ const Header = () => {
 
         <ul className={cn(s.menu)}>
           {MENU.map(({ id, value, link }) => (
-            <li className={cn(s.item)}>
-              <a key={id} className={cn(s.menuLink)} href={link}>
+            <li key={id} className={cn(s.item)}>
+              <Link className={cn(s.menuLink)} to={link}>
                 {value}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
