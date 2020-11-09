@@ -55,12 +55,6 @@
 
   cursor: pointer;
 
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-  }
-
   &::after {
     content: '';
     position: absolute;
@@ -75,5 +69,17 @@
     border-radius: 3px;
     background-color: #212121;
     transition: width linear 0.25s;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &.activeLink {
+    &::after {
+      width: 100%;
+    }
   }
 }

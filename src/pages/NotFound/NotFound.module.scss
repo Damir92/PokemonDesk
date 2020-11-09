@@ -1,0 +1,47 @@
+@import '../../variables';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 23px 0 95px;
+
+  background-color: $danger;
+}
+
+.title {
+  position: relative;
+  margin: 0 auto;
+
+  font-weight: bold;
+  font-size: 700px;
+  line-height: 818px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 4px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.description {
+  margin: -23px auto 62px;
+
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+
+  .white {
+    color: $white;
+  }
+
+  .black {
+    color: $black;
+  }
+}

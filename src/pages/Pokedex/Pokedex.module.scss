@@ -1,13 +1,35 @@
 @import '../../variables';
 
 .root {
+  position: relative;
+
   min-height: 100vh;
+  padding-bottom: 110px;
   overflow: hidden;
 }
 
 .contentWrap {
   display: flex;
-  margin-top: 70px;
-  margin-bottom: 10px;
+  flex-direction: column;
   align-items: center;
+  margin-top: 70px;
+
+  text-align: center;
+}
+
+.grid {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  width: 350px;
+  margin-bottom: 45px;
+}
+
+.img {
+  width: 168px;
+  height: auto;
 }
