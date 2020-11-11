@@ -29,7 +29,7 @@
 }
 
 .h5 {
-  margin: 0;
+  margin: 0 0 12px;
 
   font-size: 18px;
   line-height: 21px;
@@ -45,4 +45,8 @@
 .title {
   text-align: inherit;
   font-weight: normal;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
