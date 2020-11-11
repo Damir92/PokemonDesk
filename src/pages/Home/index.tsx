@@ -1,4 +1,5 @@
 import React from 'react';
+import { A } from 'hookrouter';
 
 import Header from '../../components/Header';
 import Layout from '../../components/Layout';
@@ -9,13 +10,7 @@ import Heading from '../../components/Heading';
 
 import s from './Home.module.scss';
 
-interface HomeProps {
-  history: {
-    push: Function;
-  };
-}
-
-const Home: React.FC<HomeProps> = ({ history }) => {
+const Home: React.FC = () => {
   return (
     <div className={s.root}>
       <Header />
@@ -25,7 +20,9 @@ const Home: React.FC<HomeProps> = ({ history }) => {
             <b>Find</b> all your favorite <b>Pokemon</b>
           </Heading>
           <p>You can know the type of Pokemon, its strengths, disadvantages and abilities</p>
-          <Button onClick={() => history.push('/Pokedex')}>See pokemons</Button>
+          <Button>
+            <A href="/pokedex">See pokemons</A>
+          </Button>
         </div>
         <div className={s.contentParallax}>
           <Parallax />

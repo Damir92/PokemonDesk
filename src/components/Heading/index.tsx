@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 import s from './Heading.module.scss';
 
@@ -7,9 +8,9 @@ interface LayoutProps {
 }
 
 const Heading: React.FC<LayoutProps> = ({ children, level = 1 }) => {
-  const Tag: string = `h${level}`;
+  const Tag: any = `h${level}`;
 
-  return <Tag className={s[Tag]}>{children}</Tag>;
+  return <Tag className={cn(s[Tag], s.title)}>{children}</Tag>;
 };
 
 export default Heading;

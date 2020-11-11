@@ -1,54 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import cn from 'classnames';
+import { A, usePath } from 'hookrouter';
 
 import s from './Header.module.scss';
 
 import { ReactComponent as Logo } from './assets/logo.svg';
-
-interface IMenu {
-  id: number;
-  value: string;
-  link: string;
-}
-
-const MENU: IMenu[] = [
-  {
-    id: 1,
-    value: 'Home',
-    link: '/',
-  },
-  {
-    id: 2,
-    value: 'Pokédex',
-    link: '/pokedex',
-  },
-  {
-    id: 3,
-    value: 'Legendaries',
-    link: '/',
-  },
-  {
-    id: 4,
-    value: 'Documentation',
-    link: '/',
-  },
-];
+import { GENERAL_MENU } from '../../routes';
 
 const Header = () => {
+  const path = usePath();
+
   return (
     <header className={cn(s.root)}>
       <div className={cn(s.container)}>
-        <a className={cn(s.logoLink)} href="/">
+        <A className={cn(s.logoLink)} href="/">
           <Logo />
-        </a>
+        </A>
 
         <ul className={cn(s.menu)}>
-          {MENU.map(({ id, value, link }) => (
-            <li key={id} className={cn(s.item)}>
-              <Link className={cn(s.menuLink)} to={link}>
-                {value}
-              </Link>
+          {GENERAL_MENU.map(({ title, link }) => (
+            <li key={title} className={cn(s.item)}>
+              <A
+                className={cn(s.menuLink, {
+                  [s.activeLink]: link === path,
+                })}
+                href={link}>
+                {title}
+              </A>
             </li>
           ))}
         </ul>
