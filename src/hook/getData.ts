@@ -22,7 +22,7 @@ const useData = (endpoint: string, query: object, deps: any[] = []) => {
     };
 
     getData();
-  }, [deps]);
+  }, deps);
 
   return {
     data,
