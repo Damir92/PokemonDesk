@@ -1,7 +1,8 @@
 import React from 'react';
 import { A } from 'hookrouter';
 
-import Header from '../../components/Header';
+import { LinkEnum } from '../../routes';
+
 import Layout from '../../components/Layout';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -13,7 +14,6 @@ import s from './Home.module.scss';
 const Home: React.FC = () => {
   return (
     <div className={s.root}>
-      <Header />
       <Layout className={s.contentWrap}>
         <div className={s.contentText}>
           <Heading level={1}>
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
           </Heading>
           <p>You can know the type of Pokemon, its strengths, disadvantages and abilities</p>
           <Button>
-            <A href="/pokedex">See pokemons</A>
+            <A href={LinkEnum.POKEDEX}>See pokemons</A>
           </Button>
         </div>
         <div className={s.contentParallax}>

@@ -1,11 +1,13 @@
 import React from 'react';
 import { A } from 'hookrouter';
 
-import Button from '../../components/Button';
+import { LinkEnum } from '../../routes';
 
 import s from './NotFound.module.scss';
 
 import Team from './assets/Team.png';
+
+import Button from '../../components/Button';
 
 const NotFound = () => {
   return (
@@ -19,7 +21,7 @@ const NotFound = () => {
         <span className={s.black}>has won this time.</span>
       </p>
       <Button yellow>
-        <A href="/">Return</A>
+        <A href={LinkEnum.HOME}>Return</A>
       </Button>
     </div>
   );
