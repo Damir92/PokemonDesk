@@ -8,6 +8,14 @@
   overflow: hidden;
 }
 
+.loading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
 .contentWrap {
   display: flex;
   flex-direction: column;
@@ -18,8 +26,29 @@
 }
 
 .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 34px;
   margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+}
+
+.inputWrap {
+  width: 100%;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 16px 30px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(33, 33, 33, 0.8);
+
+  background: #f2f2f2;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
 }
